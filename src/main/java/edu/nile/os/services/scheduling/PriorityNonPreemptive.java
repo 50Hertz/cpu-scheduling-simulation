@@ -134,7 +134,6 @@ public class PriorityNonPreemptive {
         for (int i = 0; i < numberOfProcess; i++) {
             System.out.format("%s%20d%20d%20d%20d%20d%20d\n", pid[i], bt[i], at[i], prt[i], finishTime[i], waitingTime[i], turnAroundTime[i]);
         }
-
         System.out.format("%85s%20f%20f\n", "Average", averageWaitingTime, averageTurnAroundTime);
 
         return Arrays.asList(averageWaitingTime, averageTurnAroundTime);
