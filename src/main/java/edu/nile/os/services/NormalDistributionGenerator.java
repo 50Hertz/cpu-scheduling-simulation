@@ -18,24 +18,6 @@ public class NormalDistributionGenerator {
         this.distribution = new NormalDistribution(mean.doubleValue(), standardDeviation.doubleValue());
     }
 
-    public NormalDistributionGenerator(BigDecimal mean, BigDecimal standardDeviation) {
-        this.mean = mean;
-        this.standardDeviation = standardDeviation;
-        this.distribution = new NormalDistribution(mean.doubleValue(), standardDeviation.doubleValue());
-    }
-
-    public BigDecimal getMean() {
-        return mean;
-    }
-
-    public BigDecimal getStandardDeviation() {
-        return standardDeviation;
-    }
-
-    public NormalDistribution getDistribution() {
-        return distribution;
-    }
-
     public long sample() {
         long sample = Math.abs(Math.round(distribution.sample()));
         if (sample >= lowerBound && sample <= upperBound) {
